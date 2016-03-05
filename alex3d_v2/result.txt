@@ -1,0 +1,5 @@
+I0305 06:49:56.642586 10216 solver.cpp:454] Snapshotting to binary proto file alex3d_v2_net_snapshot_iter_400000.caffemodel
+I0305 06:49:56.796861 10216 sgd_solver.cpp:273] Snapshotting solver state to binary proto file alex3d_v2_net_snapshot_iter_400000.solverstate
+I0305 06:49:57.012033 10216 solver.cpp:317] Iteration 400000, loss = 0.0163985
+I0305 06:49:57.012125 10216 solver.cpp:337] Iteration 400000, Testing net (#0)
+I0305 06:50:16.290983 10216 solver.cpp:404]     Test net output #0: accuracy = 0.83664
