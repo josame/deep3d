@@ -5,9 +5,9 @@ layer {
     scale: 1.000
   }
   data_param {
-    source: "../../../mnt/remote_data/mylmdb"
+    source: "../../../../mnt/remote_data/mylmdb"
     backend: LMDB
-    batch_size: 1000
+    batch_size: 256
   }
   top: "data"
   top: "label"
@@ -20,7 +20,7 @@ layer {
     scale: 1.000
   }
   data_param {
-    source: "../../../mnt/remote_data/mylmdb_test"
+    source: "../../../../mnt/remote_data/mylmdb_test"
     backend: LMDB
     batch_size: 250
   }
@@ -34,7 +34,7 @@ layer {
   param { lr_mult: 1}
   param { lr_mult: 1}
   convolution_param {
-    num_output: 80
+    num_output: 64
     kernel_size: 3
     stride: 1
     weight_filler {
@@ -70,7 +70,7 @@ layer {
   param {lr_mult: 1}
   param {lr_mult: 1}
   inner_product_param {
-    num_output: 400
+    num_output: 500
     weight_filler {
       type: "xavier"
     }
