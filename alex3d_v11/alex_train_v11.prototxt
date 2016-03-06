@@ -62,7 +62,7 @@ layer {
     stride: 2
     pool: MAX
   }
-  bottom: "norm1"
+  bottom: "conv1"
   top: "pool1"
 }
 
@@ -121,7 +121,7 @@ layer {
       type: "constant"
     }
   }
-  bottom: "norm2"
+  bottom: "conv22"
   top: "conv33"
 }
 
@@ -142,7 +142,7 @@ layer {
     stride: 2
     pool: MAX
   }
-  bottom: "norm3"
+  bottom: "conv33"
   top: "pool3"
 }
 layer {
