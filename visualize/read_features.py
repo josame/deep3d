@@ -6,14 +6,13 @@ from caffe.proto import caffe_pb2
 db = leveldb.LevelDB('./features')
 datum = caffe_pb2.Datum()
 
-for key, value in db.RangeIter():
-    datum.ParseFromString(value)
-
-    label = datum.label
-    data = caffe.io.datum_to_array(datum)
-    print label
-    print data.shape
-    '''
-    #CxHxW to HxWxC in cv2
-    image = np.transpose(data, (1,2,0))
-    '''
+np.set_printoptions(threshold=np.inf, linewidth=np.inf)  # turn off summarization, line-wrapping
+with open('X.txt', 'w') as f, open('Y.txt', 'w') as b:
+	for key, value in db.RangeIter():
+    		datum.ParseFromString(value)
+    		label = datum.label
+    		data = np.sum(caffe.io.datum_to_array(datum), axis=1)
+		for x in np.nditer(data):
+			f.write("   %.5f" % round(x,5))
+		f.write("\n")
+		b.write("   %d\n" % label)
