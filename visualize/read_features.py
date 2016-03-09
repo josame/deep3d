@@ -7,7 +7,7 @@ db = leveldb.LevelDB('./features')
 datum = caffe_pb2.Datum()
 
 np.set_printoptions(threshold=np.inf, linewidth=np.inf)  # turn off summarization, line-wrapping
-with open('X.txt', 'w') as f, open('Y.txt', 'w') as b:
+with open('X.txt', 'w') as f:
 	for key, value in db.RangeIter():
     		datum.ParseFromString(value)
     		label = datum.label
@@ -15,4 +15,3 @@ with open('X.txt', 'w') as f, open('Y.txt', 'w') as b:
 		for x in np.nditer(data):
 			f.write("   %.5f" % round(x,5))
 		f.write("\n")
-		b.write("   %d\n" % label)
