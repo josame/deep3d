@@ -1,6 +1,8 @@
+import sys
 i=0
-with open('testlabels.txt', 'r') as f, open('txlabels.txt', 'w') as g:
+one_in_x = int(sys.argv[1])
+with open('testlabels.txt', 'r') as f, open('Y.txt', 'w') as g:
 	for line in f:
-		if (i < 29500):
-			g.write("   "+line)
+		if (i < 29500 and i%one_in_x==0):
+			g.write("   "+"{:1.7e}".format(float(line))+"\n")
 		i=i+1
