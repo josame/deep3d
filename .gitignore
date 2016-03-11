@@ -1,0 +1,7 @@
+visualize/features/*
+visualize/train_features/*
+visualize/X.txt
+visualize/X_test.txt
+visualize/Y.txt
+visualize/Y_test.txt
+
