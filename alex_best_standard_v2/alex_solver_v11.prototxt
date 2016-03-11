@@ -1,0 +1,15 @@
+net: "alex_train_v11.prototxt"
+test_iter: 100
+test_interval: 15000
+base_lr: 0.125
+lr_policy: "step"
+gamma: 0.1
+stepsize: 18000
+display: 100
+max_iter: 90000
+momentum: 0.9
+weight_decay: 0.00150
+snapshot: 15000
+snapshot_prefix: "alex_best_net_snapshot"
+solver_mode: GPU
+
