@@ -7,3 +7,4 @@ visualize/Y_test.txt
 visualize/test_features/*
 visualize/test_labels/*
 visualize/train_labels/*
+visualize/mysvm*
