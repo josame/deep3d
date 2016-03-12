@@ -4,7 +4,7 @@ import leveldb
 import numpy as np
 from caffe.proto import caffe_pb2
 
-db = leveldb.LevelDB('./features')
+db = leveldb.LevelDB('./test_features')
 datum = caffe_pb2.Datum()
 i = 0
 one_in_x = int(sys.argv[1])

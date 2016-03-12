@@ -1,16 +1,19 @@
+import sys
 import caffe
-import lmdb
-import os
-import caffe.proto.caffe_pb2
-from caffe.io import datum_to_array
+import leveldb
+import numpy as np
+from caffe.proto import caffe_pb2
 
-lmdb_env = lmdb.open('/mnt/remote_data/mylmdb')
-lmdb_txn = lmdb_env.begin()
-lmdb_cursor = lmdb_txn.cursor()
-datum = caffe.proto.caffe_pb2.Datum()
-
-for key, value in lmdb_cursor:
-    datum.ParseFromString(value)
-    label = datum.label
-    data = caffe.io.datum_to_array(datum)
-    print label
+db = leveldb.LevelDB('./train_labels')
+datum = caffe_pb2.Datum()
+i = 0
+one_in_x = int(sys.argv[1])
+np.set_printoptions(threshold=np.inf, linewidth=np.inf)  # turn off summarization, line-wrapping
+with open('Y.txt', 'w') as f:
+	for key, value in db.RangeIter():
+    		datum.ParseFromString(value)
+    		label = datum.label
+    		data = caffe.io.datum_to_array(datum)
+		if(i%one_in_x==0):
+			f.write("%d\n"  %(data))
+		i=i+1

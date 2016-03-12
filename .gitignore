@@ -4,4 +4,6 @@ visualize/X.txt
 visualize/X_test.txt
 visualize/Y.txt
 visualize/Y_test.txt
-
+visualize/test_features/*
+visualize/test_labels/*
+visualize/train_labels/*
