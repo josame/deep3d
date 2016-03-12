@@ -5,7 +5,7 @@ layer {
     scale: 1.000
   }
   data_param {
-    source: "../../../../mnt/remote_data/mylmdb35"
+    source: "../../../../mnt/remote_data/mylmdb"
     backend: LMDB
     batch_size: 256
   }
@@ -20,7 +20,7 @@ layer {
     scale: 1.000
   }
   data_param {
-    source: "../../../../mnt/remote_data/mylmdb_newtest_vishakh5"
+    source: "../../../../mnt/remote_data/mylmdb_val"
     backend: LMDB
     batch_size: 250
   }
