@@ -8,3 +8,5 @@ visualize/test_features/*
 visualize/test_labels/*
 visualize/train_labels/*
 visualize/mysvm*
+vishakh_features/*
+vishakh_labels/*

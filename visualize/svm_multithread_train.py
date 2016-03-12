@@ -31,12 +31,12 @@ def print_time(thread_name, gamma, cost, training_examples, training_labels):
 x_train = np.loadtxt("X.txt")
 y_train = np.loadtxt("Y.txt")
 
-thread1 = myThread(1, "1", 0.000001, 0.1, x_train, y_train)
-thread2 = myThread(2, "2", 0.000001, 10.0, x_train, y_train)
-thread3 = myThread(3, "3", 0.0001, 0.1, x_train, y_train)
-thread4 = myThread(4, "4", 0.0001, 10.0, x_train, y_train)
-thread5 = myThread(5, "5", 0.00001, 10.0, x_train, y_train)
-thread6 = myThread(6, "6", 0.00001, 0.1, x_train, y_train)
+thread1 = myThread(7, "7", 0.000005, 5, x_train, y_train)
+thread2 = myThread(8, "8", 0.000005, 50, x_train, y_train)
+thread3 = myThread(9, "9", 0.000015, 5, x_train, y_train)
+thread4 = myThread(10, "10", 0.000015, 50, x_train, y_train)
+thread5 = myThread(11, "11", 0.000005, 25, x_train, y_train)
+thread6 = myThread(12, "12", 0.000015, 25, x_train, y_train)
 
 # Start new Threads
 thread1.start()
