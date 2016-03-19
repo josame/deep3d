@@ -1,6 +1,7 @@
 # deep3d 
 This document describes step by step procedure to download the dataset, process the data, 
-feed it to a caffe neural network and test it.
+feed it to a caffe neural network and test it. Since "alex3d_v11" was the best model, we are describing the procedure 
+to train and test that model on caffe.
 
 ## Data and pre-processing
 
@@ -39,6 +40,8 @@ Before running the "train_alex3d_v11.sh" script, the following are to be ensured
 
 2. The second layer in the "alex_train_v11.prototxt" should contain the path to the test lmdb file.
 
+3. The correct caffe folder is used.
+
 OPTIONAL: Remove all the .solverstate and .caffemodel files before training (so that there is no ambiguity when it comes to tesitng these models)
 
 The output of training will be .solverstate and .caffemodel files for different epochs of training. It also prints on screen 
@@ -55,7 +58,7 @@ To find the test accuracies, you should do the following:
 
 1. The the main file, go to directory named "tester". You should see "test_my_caffe_model.sh" in it.
 
-2. Before running it, you need to input the path to "alex_train_v11.prototxt" file for the model and the path to the .caffemodel snapshot.
+2. Before running it, you need to input the path to "alex_train_v11.prototxt" file for the model and the path to the .caffemodel snapshot. Also make sure that the correct caffe folder is used.
 
 3. Run the "test_my_caffe_model.sh" file. It will output the test accuracy on the screen.
 
