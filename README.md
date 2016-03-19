@@ -1,8 +1,8 @@
-# deep3d
+# deep3d 
 This document describes step by step procedure to download the dataset, process the data, 
 feed it to a caffe neural network and test it.
 
-# Data and pre-processing
+## Data and pre-processing
 
 1. Download the data set using the following link: http://vision.princeton.edu/projects/2014/3DShapeNets/3DShapeNetsCode.zip
 
@@ -14,7 +14,7 @@ NOTE: The training and validation sets in the dictionary are a part of the train
 3. We then use createLMDB_train.py, createLMDB_test.py, createLMDB_val.py to create lmdb folders (namely mylmdb, mylmdb_test, mylmdb_val.py) which can be fed into the caffe code as input.
 
 
-# Training the neural network
+## Training the neural network
 
 There are two components to training:
 
@@ -45,7 +45,7 @@ The output of training will be .solverstate and .caffemodel files for different 
 the loss and accuracy. The frequency of printing these can be set in the "alex_solver_v11.prototxt" file.
 
 
-# Testing the neural network 
+## Testing the neural network 
 
 We obtain the test accuracies while training the neural network. However, the training process also outputs .solverstate and 
 .caffemodel files which can be used to find the test accuracies. The number of epochs to be tested for can also be set while
