@@ -20,6 +20,7 @@ NOTE: The training and validation sets in the dictionary are a part of the train
 There are two components to training:
 
 1. Defining the model
+
 2. Defining the solver which has information about the location of the LMDB data (for training and testing) and 
 the model .prototxt file
 
@@ -28,11 +29,15 @@ Open the file "alex3d_v11" (NOTE: It has nothing to do with AlexNet, it was just
 It should contain the following main files:
 
 1. alex_solver_v11.prototxt - this is the prototxt file in which the solver is defined
+
 2. alex_train_v11.prototxt - this contains the model definition
+
 3. train_alex3d_v11.sh - this script runs the training part
 
 Before running the "train_alex3d_v11.sh" script, the following are to be ensured:
+
 1. The first layer in the "alex_train_v11.prototxt" should contain the path to the training lmdb file.
+
 2. The second layer in the "alex_train_v11.prototxt" should contain the path to the test lmdb file.
 
 OPTIONAL: Remove all the .solverstate and .caffemodel files before training (so that there is no ambiguity when it comes to tesitng these models)
@@ -44,10 +49,16 @@ the loss and accuracy. The frequency of printing these can be set in the "alex_s
 
 ###########################    Testing the neural network    ################################################
 
-We obtain the test accuracies while training the neural network. However, the training process also outputs .solverstate and .caffemodel files which can be used to find the test accuracies. The number of epochs to be tested for can also be set while tesitng.
+We obtain the test accuracies while training the neural network. However, the training process also outputs .solverstate and 
+.caffemodel files which can be used to find the test accuracies. The number of epochs to be tested for can also be set while
+tesitng.
 
 To find the test accuracies, you should do the following:
+
 1. The the main file, go to directory named "tester". You should see "test_my_caffe_model.sh" in it.
+
 2. Before running it, you need to input the path to "alex_train_v11.prototxt" file for the model and the path to the .caffemodel snapshot.
+
 3. Run the "test_my_caffe_model.sh" file. It will output the test accuracy on the screen.
+
 
