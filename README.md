@@ -4,7 +4,7 @@ feed it to a caffe neural network and test it.
 
 ########################    Data and pre-processing    #########################################
 
-1. Download the data set using the following link: <insert link>
+1. Download the data set using the following link: http://vision.princeton.edu/projects/2014/3DShapeNets/3DShapeNetsCode.zip
 
 2. Use the "CreateProcessedData.py" script to combine all the .mat files containing data in the volumetric 
 into one giant dictionary containing training, validation and test sets. The way to run it is "python CreateProcessedData.py <path to directory containing volumetric data>. This creates a file "processed_data.mat"
