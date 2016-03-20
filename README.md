@@ -5,10 +5,11 @@ to train and test that model on caffe.
 
 ## Data and pre-processing
 
-1. Download the data set using the following link: http://vision.princeton.edu/projects/2014/3DShapeNets/3DShapeNetsCode.zip
+1. Download the data set using the following link: http://vision.princeton.edu/projects/2014/3DShapeNets/3DShapeNetsCode.zip.
+Once you unzip it, you should see a directory named "3DShapeNets". Inside it, there should be a directory named "volumetric_data".
 
 2. Use the "CreateProcessedData.py" script to combine all the .mat files containing data in the volumetric 
-into one giant dictionary containing training, validation and test sets. The way to run it is "python CreateProcessedData.py <path to directory containing volumetric data>. This creates a file "processed_data.mat"
+into one giant dictionary containing training, validation and test sets. The way to run it is "python CreateProcessedData.py <path to directory containing volumetric data>. This creates a file "processed_data.mat". 
 
 NOTE: The training and validation sets in the dictionary are a part of the training split of the original data set.
 

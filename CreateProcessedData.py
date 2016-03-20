@@ -4,8 +4,10 @@ import numpy as np
 import scipy.io as sio
 import math
 
-volumetric_dir = sys.argv[1]
-class_list = os.listdir(volumetric_dir)
+volumetric_dir = sys.argv[1] # This will be the path to the directory "volumetric_dir"
+
+
+class_list = os.listdir(volumetric_dir) #lists all directories in "volumetric_dir"
 i = 0
 data_sections = ['test', 'train']
 x_train=[]
